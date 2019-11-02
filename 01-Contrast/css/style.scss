@@ -1,0 +1,125 @@
+$black: #12100E;
+$white: #FCFCFC;
+$night: #10243d;
+
+%pseudo__base{
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: $black;
+    min-width: 100vh;
+    min-height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.window__container{
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 20rem;
+    overflow: hidden;
+    .blind__container{
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 50%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .single__blind{
+            width: 100%;
+            height: 0.6rem;
+            background-color: $black;
+        }
+    }
+}
+.window__outside{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient($night, lighten($night, 20%));
+    border-left: 0.5rem solid darken($night, 5%);
+    border-bottom: 1rem solid darken($night, 5%);
+    .moon{
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        background-color: $white;
+        border-radius: 50%;
+        &::before{
+            @extend %pseudo__base;
+            top: -5rem; 
+            left: -5rem;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(transparentize($white, .5) 0%, transparentize($white, 0.75) 33%,transparent 66%);
+            // transform: scale(1);
+            animation: 12s ease moon-glow infinite; 
+        }
+    }
+    .star{
+        width: 0.125rem;
+        height: 0.125rem;
+        border-radius: 50%;
+        background: $white;
+        position: absolute;
+        animation: twinkle 3s ease infinite;
+    }
+    @for $i from 1 through (26){
+        $top: percentage((random(65) * 0.01));
+        $left: percentage((random(85) * 0.01));
+        $time: random(5) + s;
+        .star:nth-of-type(#{$i}){
+            top: $top;
+            left: $left;
+            animation-delay: $time;
+        }
+    }
+}
+
+@keyframes moon-glow{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes twinkle{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.6);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

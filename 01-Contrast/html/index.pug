@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title #Codevember 01 Contrast
+        link(rel="stylesheet", type="text/css", href="../css/style.css")
+    body
+        .window__container
+            .blind__container
+                - for (var i = 0; i < 7; i++)
+                    .single__blind
+            .blind__adjuster
+            .window__outside
+                .moon
+                - for (var i = 0; i < 25; i++)
+                    .star
