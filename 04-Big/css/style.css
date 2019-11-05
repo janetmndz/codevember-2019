@@ -1,0 +1,299 @@
+html, body {
+  background: #C9B3C3;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__container {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  background: #D6E3F8;
+  -webkit-box-shadow: inset 0px 0px 0 rgba(133, 94, 122, 0.7), 4px 4px 8px 0 rgba(133, 94, 122, 0.6), 6px 6px 12px 0 rgba(201, 179, 195, 0.6);
+          box-shadow: inset 0px 0px 0 rgba(133, 94, 122, 0.7), 4px 4px 8px 0 rgba(133, 94, 122, 0.6), 6px 6px 12px 0 rgba(201, 179, 195, 0.6);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mountain__container {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  -webkit-animation: slide-up 4s cubic-bezier(0.71, 0.07, 0, 0.68) 1;
+          animation: slide-up 4s cubic-bezier(0.71, 0.07, 0, 0.68) 1;
+}
+
+.mountain__container .left__mountain {
+  z-index: 5;
+  position: absolute;
+  left: -15%;
+  bottom: 10%;
+  border-left: 10rem solid transparent;
+  border-right: 13rem solid transparent;
+  border-bottom: 10rem solid #755d49;
+}
+
+.mountain__container .left__mountain::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: -15rem;
+  background: #755d49;
+  -webkit-clip-path: polygon(100% 47%, 69% 76%, 75% 100%, 0% 100%, 100% 0, 89% 35%);
+          clip-path: polygon(100% 47%, 69% 76%, 75% 100%, 0% 100%, 100% 0, 89% 35%);
+  width: 15rem;
+  height: 15rem;
+}
+
+.mountain__container .left__mountain::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: transparent;
+  -webkit-transform: translate(-50%, 10px);
+          transform: translate(-50%, 10px);
+  border-left: 15rem solid transparent;
+  border-right: 15rem solid transparent;
+  border-bottom: 15rem solid #856a53;
+}
+
+.mountain__container .right__mountain {
+  z-index: 5;
+  position: absolute;
+  right: -30%;
+  bottom: -15%;
+  border-left: 15rem solid transparent;
+  border-right: 18rem solid transparent;
+  border-bottom: 15rem solid #6f5845;
+}
+
+.mountain__container .right__mountain::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: -20rem;
+  background: #755d49;
+  -webkit-clip-path: polygon(90% 25%, 100% 43%, 77% 60%, 94% 72%, 71% 100%, 0 100%, 100% 0);
+          clip-path: polygon(90% 25%, 100% 43%, 77% 60%, 94% 72%, 71% 100%, 0 100%, 100% 0);
+  width: 20rem;
+  height: 20rem;
+}
+
+.mountain__container .right__mountain::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: transparent;
+  -webkit-transform: translate(-50%, 10px);
+          transform: translate(-50%, 10px);
+  border-left: 20rem solid transparent;
+  border-right: 20rem solid transparent;
+  border-bottom: 20rem solid #8E7159;
+}
+
+.hills__container {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+}
+
+.hills__container .hill:first-child {
+  position: absolute;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  width: 30rem;
+  height: 15rem;
+  border-radius: 0% 100% 0% 0%;
+  background-color: #6E9173;
+  -webkit-animation: slide-left 3s linear 1;
+          animation: slide-left 3s linear 1;
+}
+
+.hills__container .hill:first-child .tree {
+  position: absolute;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 1.5rem solid #425745;
+}
+
+.hills__container .hill:first-child .tree::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -0.125rem;
+  bottom: -2rem;
+  width: 0.25rem;
+  height: 0.5rem;
+  background: #2c3a2e;
+}
+
+.hills__container .hill:first-child .tree:nth-child(1) {
+  left: 30%;
+}
+
+.hills__container .hill:first-child .tree:nth-child(2) {
+  top: 20%;
+  left: 20%;
+}
+
+.hills__container .hill:first-child .tree:nth-child(3) {
+  top: 5%;
+  left: 5%;
+}
+
+.hills__container .hill:first-child .tree:nth-child(4) {
+  top: 16%;
+  left: 38%;
+}
+
+.hills__container .hill:first-child .tree:nth-child(5) {
+  top: 25%;
+  left: 60%;
+}
+
+.hills__container .hill:last-child {
+  position: absolute;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  width: 30rem;
+  height: 15rem;
+  border-radius: 100% 0% 0% 0%;
+  background: #58745c;
+  -webkit-animation: slide-right 3s linear 1;
+          animation: slide-right 3s linear 1;
+}
+
+.hills__container .hill:last-child .tree {
+  position: absolute;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 1.75rem solid #425745;
+}
+
+.hills__container .hill:last-child .tree::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -0.125rem;
+  bottom: -2.25rem;
+  width: 0.25rem;
+  height: 0.5rem;
+  background: #2c3a2e;
+}
+
+.hills__container .hill:last-child .tree:nth-child(1) {
+  right: 30%;
+}
+
+.hills__container .hill:last-child .tree:nth-child(2) {
+  top: 30%;
+  right: 20%;
+}
+
+.hills__container .hill:last-child .tree:nth-child(3) {
+  top: 5%;
+  right: 5%;
+}
+
+.hills__container .hill:last-child .tree:nth-child(4) {
+  top: 50%;
+  right: 45%;
+}
+
+.hills__container .hill:last-child .tree:nth-child(5) {
+  top: 35%;
+  right: 65%;
+}
+
+.hills__container .hill:last-child .tree:nth-child(6) {
+  top: 15%;
+  right: 45%;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
