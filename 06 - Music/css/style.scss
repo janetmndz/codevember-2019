@@ -1,0 +1,123 @@
+$background: #ECC8AE;
+$top: #F1F7ED;
+$bottom: #444545;
+$record: #1F1B20;
+$sticker: #F2A571;
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+%pseudo_base{
+	content: '';
+	display: block;
+	position: absolute;
+}
+
+@mixin sprials($color){
+    background-image: 
+        radial-gradient(transparent 25%, $color 25%, $color 28%, transparent 28%), 
+        radial-gradient(transparent 35%, $color 35%, $color 38%, transparent 38%), 
+        radial-gradient(transparent 45%, $color 45%, $color 48%, transparent 48%), 
+        radial-gradient(transparent 55%, $color 55%, $color 58%, transparent 58%), 
+        radial-gradient(transparent 65%, $color 65%, $color 68%, transparent 68%);
+}
+
+body{
+	background: $background;
+	width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recordplayer{
+    position: relative;
+    width: 25rem;
+    height: 20rem;
+    &__top{
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 90%;
+        background: $top;
+        border-radius: 0.3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; 
+        .record{
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            background: $record;
+            @include sprials(darken($record, 15%));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: spin 8s linear infinite;
+            &::before{
+                @extend %pseudo_base;
+                @include sprials(lighten($sticker, 5%));
+                background-color: $sticker;
+                width: 14rem;
+                height: 14rem;
+                border-radius: 50%;
+                clip-path: polygon(25% 0, 75% 0, 50% 50%, 75% 100%, 25% 100%, 50% 50%);
+            }
+            &__label{
+                position: absolute;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                background: saturate($sticker, 50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &::before{
+                    @extend %pseudo_base;
+                    width: 1rem;
+                    height: 1rem;
+                    background: $record;
+                    border-radius: 50%;
+                }
+                &::after{
+                    @extend %pseudo_base;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background: $top;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .controls{
+            width: 8rem;
+            height: 100%;
+            border: 1px solid red;
+        }
+    }
+    &__bottom{
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 15%;
+        background: linear-gradient(darken($bottom, 15%), $bottom);
+        border-radius: 0.3rem;
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}

@@ -1,0 +1,165 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.recordplayer__top .record::before, .recordplayer__top .record__label::before, .recordplayer__top .record__label::after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+body {
+  background: #ECC8AE;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recordplayer {
+  position: relative;
+  width: 25rem;
+  height: 20rem;
+}
+
+.recordplayer__top {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90%;
+  background: #F1F7ED;
+  border-radius: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recordplayer__top .record {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: #1F1B20;
+  background-image: radial-gradient(transparent 25%, black 25%, black 28%, transparent 28%), radial-gradient(transparent 35%, black 35%, black 38%, transparent 38%), radial-gradient(transparent 45%, black 45%, black 48%, transparent 48%), radial-gradient(transparent 55%, black 55%, black 58%, transparent 58%), radial-gradient(transparent 65%, black 65%, black 68%, transparent 68%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: spin 8s linear infinite;
+          animation: spin 8s linear infinite;
+}
+
+.recordplayer__top .record::before {
+  background-image: radial-gradient(transparent 25%, #f4b488 25%, #f4b488 28%, transparent 28%), radial-gradient(transparent 35%, #f4b488 35%, #f4b488 38%, transparent 38%), radial-gradient(transparent 45%, #f4b488 45%, #f4b488 48%, transparent 48%), radial-gradient(transparent 55%, #f4b488 55%, #f4b488 58%, transparent 58%), radial-gradient(transparent 65%, #f4b488 65%, #f4b488 68%, transparent 68%);
+  background-color: #F2A571;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  -webkit-clip-path: polygon(25% 0, 75% 0, 50% 50%, 75% 100%, 25% 100%, 50% 50%);
+          clip-path: polygon(25% 0, 75% 0, 50% 50%, 75% 100%, 25% 100%, 50% 50%);
+}
+
+.recordplayer__top .record__label {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #ffa264;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recordplayer__top .record__label::before {
+  width: 1rem;
+  height: 1rem;
+  background: #1F1B20;
+  border-radius: 50%;
+}
+
+.recordplayer__top .record__label::after {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #F1F7ED;
+  border-radius: 50%;
+}
+
+.recordplayer__top .controls {
+  width: 8rem;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.recordplayer__bottom {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e1e1e), to(#444545));
+  background: linear-gradient(#1e1e1e, #444545);
+  border-radius: 0.3rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
