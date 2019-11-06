@@ -10,8 +10,10 @@ My contributions to Codevember challenges in 2019
 | Day   | Theme     | Codepen Link |
 |-------|-----------|--------------|
 | 01    | Contrast  | [Dark Contrast Night](https://codepen.io/janmez/full/ZEEvOyW) |
-| 04    | Big       | [Big Mountains](https://codepen.io/janmez/full/rNNJJeZ) |
+| 04    | Big       | [Big Mountains](https://codepen.io/janmez/full/rNNJJeZ) ⭐️|
 | 05    | Light     | [Lightbulb](https://codepen.io/janmez/full/ZEExXmq) |
+<br/>
 
+⭐️ = Was picked to be featured by Codepen team
 ## License
 MIT, see LICENSE.md for details.
