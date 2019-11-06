@@ -1,0 +1,161 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #283156;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.lightbulb__container {
+  position: relative;
+  width: 15rem;
+  height: 19rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.lightbulb__container .lightbulb__bulb {
+  position: relative;
+  width: 13rem;
+  height: 13rem;
+  background: #FEFFBE;
+  border-radius: 50%;
+}
+
+.lightbulb__container .lightbulb__bulb_inside {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  width: 8rem;
+  height: 8rem;
+  border-right: 1.15rem solid #FCFCF7;
+  border-radius: 50%;
+  -webkit-transform: rotateZ(-20deg);
+          transform: rotateZ(-20deg);
+}
+
+.lightbulb__container .lightbulb__bulb_bottom {
+  position: absolute;
+  width: 10rem;
+  height: 4rem;
+  bottom: -1.5rem;
+  left: calc(50% - 5rem);
+  background: #FEFFBE;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.lightbulb__container .lightbulb__bulb::before, .lightbulb__container .lightbulb__bulb::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: 73%;
+  width: 8rem;
+  height: 8rem;
+  background: #283156;
+}
+
+.lightbulb__container .lightbulb__bulb::before {
+  left: -41%;
+  border-top-right-radius: 50%;
+}
+
+.lightbulb__container .lightbulb__bulb::after {
+  right: -41%;
+  border-top-left-radius: 50%;
+}
+
+.lightbulb__container .lightbulb__base {
+  z-index: 10;
+  position: absolute;
+  bottom: 1.75rem;
+  width: 7.25rem;
+  height: 2.5rem;
+  background: #888F98;
+  border-radius: 0.5rem;
+}
+
+.lightbulb__container .lightbulb__glow {
+  z-index: 8;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-15%) scale(0.5);
+          transform: translateX(-50%) translateY(-15%) scale(0.5);
+  -webkit-filter: blur(5rem);
+          filter: blur(5rem);
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: radial-gradient(#FEFFBE 25%, transparent 80%);
+  -webkit-animation: glow 5s ease infinite;
+          animation: glow 5s ease infinite;
+}
+
+.lightbulb__container .lightbulb__spiral {
+  width: 5rem;
+  height: 1.5rem;
+  background: #7a828c;
+  border-radius: 0.5rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(10%, #565c64));
+  background-image: linear-gradient(180deg, transparent 45%, #565c64 10%);
+  background-size: 50% 30%;
+}
+
+@-webkit-keyframes glow {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-15%) scale(0.5);
+            transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(-15%) scale(1.15);
+            transform: translateX(-50%) translateY(-15%) scale(1.15);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-15%) scale(0.5);
+            transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+}
+
+@keyframes glow {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-15%) scale(0.5);
+            transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(-15%) scale(1.15);
+            transform: translateX(-50%) translateY(-15%) scale(1.15);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-15%) scale(0.5);
+            transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+}
+/*# sourceMappingURL=style.css.map */
