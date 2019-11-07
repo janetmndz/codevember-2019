@@ -3,6 +3,8 @@ $top: #F1F7ED;
 $bottom: #444545;
 $record: #1F1B20;
 $sticker: #F2A571;
+$needle: #9A9E97;
+$controls: transparentize($sticker, 0.5);
 
 *, *::before, *::after{
 	box-sizing: border-box;
@@ -45,6 +47,7 @@ body{
         height: 90%;
         background: $top;
         border-radius: 0.3rem;
+        box-shadow: inset 0px 0px 8px transparentize($bottom, 0.78);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -79,8 +82,8 @@ body{
                 justify-content: center;
                 &::before{
                     @extend %pseudo_base;
-                    width: 1rem;
-                    height: 1rem;
+                    width: 0.75rem;
+                    height: 0.75rem;
                     background: $record;
                     border-radius: 50%;
                 }
@@ -96,7 +99,124 @@ body{
         .controls{
             width: 8rem;
             height: 100%;
-            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            .needle{
+                position: relative;
+                position: relative;
+                width: 100%;
+                height: 8rem;
+                display: flex; 
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                &__holder{
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    border: 0.25rem solid darken($needle, 25%);
+                    background: darken($needle, 10%);
+                }
+                .needle__front, .needle__end{
+                    position: absolute;
+                    width: 0.65rem;
+                    background: lighten($needle, 10%);
+                }
+                .needle__front{
+                    height: 8rem;
+                    top: 45%;
+                    left: 50%;
+                    transform: rotateZ(36deg) translate(0%, -40%);
+                    transform-origin: top;
+                    &::before{
+                        @extend %pseudo_base;
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        background: darken($needle, 10%);
+                        border-radius: 3px;
+                        left: -0.325rem;
+                    }
+                }
+                .needle__end{
+                    height: 5rem;
+                    bottom: -54%;
+                    left: 17%;
+                    transform: rotateZ(55deg);
+                    transform-origin: top;
+                    &::before{
+                        @extend %pseudo_base;
+                        width: 0.85rem;
+                        height: 2rem;
+                        background: darken($needle, 30%);
+                        border-radius: 0.3rem;
+                        bottom: -20%;
+                        left: -0.125rem;
+                    }
+                }
+            }
+            .switches{
+                width: 6rem;
+                height: 8rem;
+                background: $controls;
+                border: 0.25rem solid saturate($controls, 75%);
+                border-radius: 0.25rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                .knob__container, .level__container{
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center; 
+                    justify-content: space-around;
+                }
+                .knob{
+                    position: relative;
+                    width: 2rem;
+                    height: 2rem; 
+                    border-radius: 50%;
+                    background: $top;
+                    border: 0.2rem solid lighten($bottom, 5%);
+                    box-shadow: inset 0px 0px 6px darken($top, 15%), 0px 0px 16px 0px darken($controls, 3%);
+                    &::before{
+                        @extend %pseudo_base;
+                        width: 0.25rem;
+                        height: 0.5rem;
+                        background: $bottom; 
+                        left: 0;
+                    }
+                }
+                .knob:nth-child(1)::before{
+                    left: 12%;
+                    top: 50%;
+                    transform: rotateZ(60deg);
+                }
+                .knob:nth-child(2)::before{
+                    left: 32%;
+                    top: 71%;
+                    transform: rotateZ(25deg);
+                }
+                .level{
+                    position: relative;
+                    width: 0.25rem;
+                    background: $needle;
+                    height: 6rem;
+                    border-radius: 1rem;
+                    &::before{
+                        @extend %pseudo_base;
+                        width: 2rem;
+                        height: 1rem;
+                        background: darken($needle, 25%);
+                        border-radius: 0.25rem;
+                        left: -0.85rem;
+                        top: 28%;
+                    }
+                }
+            }
         }
     }
     &__bottom{
