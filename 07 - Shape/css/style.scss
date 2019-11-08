@@ -1,0 +1,196 @@
+$background: linear-gradient(#7d62c1 0%, #e8b48d 100%);
+$pole: #3d202c;
+$wire: #383b53;
+$pidgeon: #C8C5D9;
+$beak: #C95934;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+%pseudo_base {
+	content: "";
+	display: block;
+	position: absolute;
+}
+@mixin birdlegs($w, $b, $lr){
+	&::before, &::after{
+        width: $w;	
+	}
+	&::before{
+		bottom: $b;
+		left: $lr;
+	}
+	&::after{
+		bottom: $b;
+		right: $lr;
+	}
+}
+@mixin birdbody($w, $h, $br){
+	width: $w;
+	height: $h;
+	border-radius: $br;
+}
+@mixin birdwing($w, $h, $t, $l, $rd, $lgd){
+	width: $w;
+	height: $h;
+	top: $t;
+	left: $l;
+	transform: rotateZ($rd);
+	background: linear-gradient($lgd, darken($pidgeon, 20%) 5%, transparent 75%);
+}
+@mixin birdhead($w, $h, $t, $l, $r:50%){
+	width: $w;
+	height: $h;
+	border-radius: $r;
+	top: $t;
+	left: $l;
+}
+@mixin birdbeak($dir, $t, $l, $s: 0.5rem){
+	top: $t;
+	left: $l;
+	border-top: #{$s / 2} solid transparent;
+	border-#{$dir}: 0.5rem solid $beak;
+	border-bottom: #{$s / 2} solid transparent;
+}
+@mixin birdeye($w, $h, $t, $l){
+	width: $w;
+	height: $h;
+	top: $t;
+	left: $l;
+}
+body {
+	margin: 0;
+	background: $background;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.container {
+	width: 100%;
+	height: 40rem;
+	.wire__container {
+		position: relative;
+		width: 100%;
+		height: 20rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.wire {
+			z-index: 5;
+			width: 100%;
+			height: 0.75rem;
+			background: linear-gradient(darken($wire, 10%) 10%, $wire 60%, #e8b48d 95%);
+		}
+	}
+}
+
+.bird__container {
+	z-index: 6;
+	position: absolute;
+	top: -2%;
+	width: 90%;
+	max-width: 40rem;
+	height: 10rem;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	.bird{
+		position: relative;
+		&::before, &::after{
+			z-index: 100;
+			@extend %pseudo_base;
+			height: 0.5rem;
+			background: $beak;
+			border-radius: 30%; 
+		}
+		.bird__head {
+			position: absolute;
+			background: linear-gradient(darken($pidgeon, 20%), $pidgeon);
+			&::before{
+				@extend %pseudo_base;
+			}
+			&::after{
+				@extend %pseudo_base;
+				border-radius: 50%;
+				background: black;
+			}
+		}
+		.bird__body { 
+			background: $pidgeon;
+			&::before{
+				@extend %pseudo_base;
+				border-radius: 50%;
+			}
+		}
+	}
+	.bird:nth-child(1) {
+		@include birdlegs(0.3rem, -5%, 43%);
+		.bird__head{
+			@include birdhead(2rem, 4rem, -30%, 45%);
+			&::before{ @include birdbeak(left, 25%, 85%); }
+			&::after{ @include birdeye(0.25rem, 0.4rem, 15%, 45%); }
+		}
+		.bird__body {
+			@include birdbody(6rem, 6rem, 50%);
+			&::before{ @include birdwing(2.5rem, 4.5rem, 10%, 3%, 5deg, -80deg); }
+		}
+	}
+	
+	.bird:nth-child(2){
+		@include birdlegs(0.2rem, -5%, 40%);
+		.bird__head{
+			@include birdhead(2rem, 2rem, -30%, 20%);
+			&::before{ @include birdbeak(right, 28%, -15%, 0.4rem); }
+			&::after{ @include birdeye(0.25rem, 0.35rem, 14%, 38%); }
+		}
+		.bird__body {
+			@include birdbody(3rem, 5rem, 75% 75% 100% 100%);
+			&::before{ @include birdwing(1.5rem, 3.5rem, 14%, 42%, -8deg, 80deg); }
+		}
+	} 
+	.bird:nth-child(3){
+		@include birdlegs(0.18rem, -5%, 35%);
+		.bird__head{
+			@include birdhead(1.5rem, 1.5rem, -10%, 13%);
+			&::before{ @include birdbeak(left, 30%, 90%, 0.25rem); }
+			&::after{ @include birdeye(0.25rem, 0.25rem, 24%, 50%); }
+		}
+		.bird__body {
+			@include birdbody(2rem, 5rem, 100% 100% 50% 50%);
+			&::before{ @include birdwing(1rem, 3rem, 20%, 3%, 8deg, -80deg); }
+		}
+	} 
+
+	.bird:nth-child(4){
+		@include birdlegs(0.35rem, -5%, 36%);
+		.bird__head{
+			@include birdhead(2rem, 3rem, -44%, 32%);
+			&::before{ @include birdbeak(left, 25%, 90%); }
+			&::after{ @include birdeye(0.3rem, 0.4rem, 15%, 48%); }
+		}
+		.bird__body {
+			@include birdbody(4rem, 4rem, 40%);
+			&::before{ @include birdwing(1.25rem, 2.75rem, 15%, 8%, 8deg, -80deg); }
+		} 
+	}
+	.bird:nth-child(5){
+		@include birdlegs(0.3rem, -4%, 39%);
+		.bird__head{
+			@include birdhead(3rem, 3rem, -25%, 14%);
+			&::before{ @include birdbeak(left, 33%, 93%, 0.8rem); }
+			&::after{ @include birdeye(0.4rem, 0.55rem, 25%, 62%); }
+		}
+		.bird__body {
+			@include birdbody(4rem, 7rem, 100%);
+			&::before{ @include birdwing(2rem, 5rem, 15%, 8%, 8deg, -80deg); }
+		}
+	} 
+}
