@@ -12,13 +12,16 @@ My contributions to Codevember challenges in 2019
 | Day   | Theme     | Codepen Link |
 |-------|-----------|--------------|
 | 01    | Contrast  | [Dark Contrast Night](https://codepen.io/janmez/full/ZEEvOyW) |
-| 04    | Big       | [Big Mountains](https://codepen.io/janmez/full/rNNJJeZ) ⭐️|
+| 04    | Big       | [Big Mountains](https://codepen.io/janmez/full/rNNJJeZ) ⭐️ 🏆|
 | 05    | Light     | [Lightbulb](https://codepen.io/janmez/full/ZEExXmq) ⭐️|
 | 06    | Music     | [Record Player](https://codepen.io/janmez/full/oNNdYoO) |
 | 07    | Shape     | [Shape of Birds](https://codepen.io/janmez/full/KKKRjVQ) |
 | 09    | Game      | [Game Boy Color](https://codepen.io/janmez/full/BaaVeWX) |
+| 19    | Stretch   | [Stretchy & Gooey Honey](https://codepen.io/janmez/full/XWWoLpX) |
 <br/>
 
 ⭐️ = Was picked to be featured by Codepen team
+
+🏆 = Was on CodePen Spark
 ## License
 MIT, see LICENSE.md for details.
