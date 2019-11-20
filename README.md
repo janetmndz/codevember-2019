@@ -17,10 +17,11 @@ My contributions to Codevember challenges in 2019
 | 06    | Music     | [Record Player](https://codepen.io/janmez/full/oNNdYoO) |
 | 07    | Shape     | [Shape of Birds](https://codepen.io/janmez/full/KKKRjVQ) |
 | 09    | Game      | [Game Boy Color](https://codepen.io/janmez/full/BaaVeWX) |
-| 18    | Stretch   | [Stretchy & Gooey Honey](https://codepen.io/janmez/full/XWWoLpX) |
+| 18    | Stretch   | [Stretchy & Gooey Honey](https://codepen.io/janmez/full/XWWoLpX) ⭐️|
+| 19    | Color     | [Colorful Bubblegum](https://codepen.io/janmez/full/jOOdzdN) |
 <br/>
 
-⭐️ = Was picked to be featured by Codepen team
+⭐️ = Was a Picked Pen on CodePen
 
 🏆 = Was on CodePen Spark
 ## License
