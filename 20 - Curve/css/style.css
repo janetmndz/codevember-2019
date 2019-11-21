@@ -1,0 +1,313 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fish__transparent::before, .fish__body::before {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+body {
+  background: #7690B5;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  -webkit-animation: swim 5s cubic-bezier(0.17, 0.78, 0.8, 0.28) infinite;
+          animation: swim 5s cubic-bezier(0.17, 0.78, 0.8, 0.28) infinite;
+}
+
+.fish {
+  position: relative;
+  background: #7690B5;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.fish > * {
+  position: absolute;
+}
+
+.fish__transparent {
+  width: 50%;
+  height: 100%;
+  background: #7690B5;
+  right: 0;
+}
+
+.fish__transparent::before {
+  width: 7.75rem;
+  height: 7.75rem;
+  background: #7690B5;
+  border-radius: 50%;
+  top: 0;
+  left: -4.5rem;
+}
+
+.fish__body {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(200deg, transparent 24%, #FBFBF2 24%);
+}
+
+.fish__body::before {
+  z-index: 5;
+  width: 7.75rem;
+  height: 7.75rem;
+  background-color: #FBFBF2;
+  border-radius: 0% 104% 0% 30%;
+  right: -4.5rem;
+  bottom: 0;
+}
+
+.fish__body .eye {
+  z-index: 6;
+  position: absolute;
+  width: 0.75rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: black;
+}
+
+.fish__body .eye.left {
+  top: 11rem;
+  left: 9.5rem;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.fish__body .eye.right {
+  top: 14rem;
+  left: 9.25rem;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.fish__body .spot {
+  position: absolute;
+  border-radius: 50%;
+  background: #F6B543;
+}
+
+.fish__body .spot:nth-of-type(1) {
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 3.75rem;
+  left: 2rem;
+}
+
+.fish__body .spot:nth-of-type(2) {
+  z-index: 6;
+  width: 4rem;
+  height: 3rem;
+  top: 14rem;
+  left: 7rem;
+}
+
+.fish__body .spot:nth-of-type(3) {
+  z-index: 6;
+  width: 5rem;
+  height: 5rem;
+  top: 9.5rem;
+  left: -2rem;
+}
+
+.fish__body .spot:nth-of-type(4) {
+  z-index: 2;
+  width: 5rem;
+  height: 5rem;
+  top: 6.75rem;
+  left: -3.5rem;
+}
+
+.snout {
+  position: absolute;
+  z-index: 5;
+  width: 1rem;
+  height: 2.75rem;
+  border-radius: 0.5rem 50% 50% 0.5rem;
+  background: #FBFBF2;
+  right: 3rem;
+  bottom: 0.9rem;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.upperfin {
+  z-index: 5;
+  position: absolute;
+  top: 4rem;
+  left: 1.5rem;
+  width: 8rem;
+  height: 8rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: radial-gradient(transparent 65%, rgba(246, 181, 67, 0.3) 65%);
+  background-size: 12rem 12rem;
+}
+
+.fin {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background: #FBFBF2;
+  border-radius: 20% 100% 5% 100%;
+}
+
+.fin.left {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: 6rem;
+  left: 6rem;
+}
+
+.fin.right {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: -1.5rem;
+  left: 3.5rem;
+}
+
+.tail {
+  position: absolute;
+  width: 7rem;
+  height: 5rem;
+  top: 0rem;
+  left: -1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.tail-left, .tail-right {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem 100%;
+  background: #FBFBF2;
+}
+
+.tail-left {
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: 0;
+  left: 0;
+  -webkit-animation: left-t 2s ease infinite;
+          animation: left-t 2s ease infinite;
+}
+
+.tail-right {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0;
+  right: 0;
+  -webkit-animation: right-t 2s ease infinite;
+          animation: right-t 2s ease infinite;
+}
+
+@-webkit-keyframes swim {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes swim {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes left-t {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes left-t {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes right-t {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(98deg);
+            transform: rotate(98deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@keyframes right-t {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(98deg);
+            transform: rotate(98deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

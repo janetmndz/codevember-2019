@@ -1,0 +1,226 @@
+$background: #7690B5;
+$fish: #FBFBF2;
+$koi: #F6B543;
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+%pseudo_base{
+	content: '';
+	display: block;
+	position: absolute;
+}
+
+body{
+	background: $background;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.container{
+		position: relative;
+		width: 15rem;
+		height: 15rem;
+		animation: swim 5s cubic-bezier(.17,.78,.8,.28) infinite;
+	}
+}
+
+.fish{
+	position: relative;
+	background: $background;
+	width: 15rem;
+	height: 15rem;
+	border-radius: 50%;
+	overflow: hidden;
+	& > *{
+		position: absolute;
+	}
+	&__transparent{
+		width: 50%;
+		height: 100%;
+		background: $background;
+		right: 0;
+		&::before{
+			@extend %pseudo_base;
+			width: 7.75rem;
+			height: 7.75rem;
+			background: $background;
+			border-radius: 50%;
+			top: 0;
+			left: -4.5rem;
+		}
+	}
+	&__body{
+		width: 50%;
+		height: 100%;
+		background: linear-gradient(200deg, transparent 24%, $fish 24%);
+		&::before{
+			z-index: 5;
+			@extend %pseudo_base;
+			width: 7.75rem;
+			height: 7.75rem;
+			background-color: $fish;
+			border-radius: 0% 104% 0% 30%;
+			right: -4.5rem;
+			bottom: 0;
+		}
+		.eye{
+			z-index: 6;
+			position: absolute;
+			width: 0.75rem;
+			height: 0.5rem;
+			border-radius: 50%;
+			background: black;
+			&.left{
+				top: 11rem;
+				left: 9.5rem;
+				transform: rotate(20deg);
+			}
+			&.right{
+				top: 14rem;
+				left: 9.25rem;
+				transform: rotate(-20deg);
+			}
+		}
+		.spot{
+			position: absolute;
+			border-radius: 50%;
+			background: $koi;
+		}
+		.spot:nth-of-type(1){
+			width: 3.5rem;
+			height: 3.5rem;
+			top: 3.75rem;
+			left: 2rem;
+		}
+		.spot:nth-of-type(2){
+			z-index: 6;
+			width: 4rem;
+			height: 3rem;
+			top: 14rem;
+			left: 7rem;
+		}
+		.spot:nth-of-type(3){
+			z-index: 6;
+			width: 5rem;
+			height: 5rem;
+			top: 9.5rem;
+			left: -2rem;
+		}
+		.spot:nth-of-type(4){
+			z-index: 2;
+			width: 5rem;
+			height: 5rem;
+			top: 6.75rem;
+			left: -3.5rem;
+		}
+	}
+}
+.snout{
+	position: absolute;
+	z-index: 5;
+	width: 1rem;
+	height: 2.75rem;
+	border-radius: 0.5rem 50% 50% 0.5rem;
+	background: $fish;
+	right: 3rem;
+	bottom: 0.9rem;
+	transform: rotate(-3deg);
+
+}
+.upperfin{
+		z-index: 5;
+		position: absolute;
+		top: 4rem;
+		left: 1.5rem;
+		width: 8rem;
+		height: 8rem;
+		transform: rotate(-90deg);
+		border-radius: 50%;
+		background-color: transparent;
+		background-image: radial-gradient(transparent 65%, transparentize($koi, 0.7) 65%); 
+		background-size: 12rem 12rem;	
+}
+
+.fin{
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+	background: $fish;
+	border-radius: 20% 100% 5% 100%;
+	&.left{
+		transform: rotate(0deg);
+    top: 6rem;
+    left: 6rem;
+	}
+	&.right{
+		transform: rotate(-45deg);
+    bottom: -1.5rem;
+    left: 3.5rem;
+	}
+}
+
+.tail{
+	position: absolute;
+	width: 7rem;
+	height: 5rem;
+	top: 0rem;
+	left: -1rem;
+	transform: rotate(45deg);
+	&-left, &-right{
+		position: absolute;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 0.5rem 100%;
+		background: $fish;
+	}
+	&-left{
+		transform-origin: bottom center;
+		transform: rotate(0deg);
+		top: 0;
+		left: 0;
+		animation: left-t 2s ease infinite;
+	}
+	&-right{
+		transform: rotate(90deg);
+		top: 0;
+		right: 0;
+		animation: right-t 2s ease infinite;
+	}
+}
+
+@keyframes swim{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes left-t {
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(-8deg);
+	}
+	100%{
+		transform: rotate(0deg)
+	}
+}
+
+@keyframes right-t {
+	0%{
+		transform: rotate(90deg);
+	}
+	50%{
+		transform: rotate(98deg);
+	}
+	100%{
+		transform: rotate(90deg)
+	}
+}
