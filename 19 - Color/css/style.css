@@ -124,73 +124,73 @@ body {
 .dispenser__glass .bubblegum:nth-of-type(3) {
   bottom: 1.25rem;
   left: 3.5rem;
-  background: #F4241D;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #d4110a;
-          box-shadow: inset -1px -3px 5px 0px #d4110a;
-}
-
-.dispenser__glass .bubblegum:nth-of-type(4) {
-  bottom: 2.5rem;
-  left: 2.5rem;
-  background: #F4241D;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #d4110a;
-          box-shadow: inset -1px -3px 5px 0px #d4110a;
-}
-
-.dispenser__glass .bubblegum:nth-of-type(5) {
-  bottom: 0.5rem;
-  left: 5rem;
-  background: #3E67C1;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #32529a;
-          box-shadow: inset -1px -3px 5px 0px #32529a;
-}
-
-.dispenser__glass .bubblegum:nth-of-type(6) {
-  bottom: 2.25rem;
-  left: 4.25rem;
-  background: #A5C103;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #7a8f02;
-          box-shadow: inset -1px -3px 5px 0px #7a8f02;
-}
-
-.dispenser__glass .bubblegum:nth-of-type(7) {
-  bottom: 1.25rem;
-  left: 6rem;
-  background: #F4DB1D;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #d4bc0a;
-          box-shadow: inset -1px -3px 5px 0px #d4bc0a;
-}
-
-.dispenser__glass .bubblegum:nth-of-type(8) {
-  bottom: 1.25rem;
-  left: 9rem;
-  background: #3E67C1;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #32529a;
-          box-shadow: inset -1px -3px 5px 0px #32529a;
-}
-
-.dispenser__glass .bubblegum:nth-of-type(9) {
-  bottom: 0.5rem;
-  left: 7.5rem;
-  background: #D8830D;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #a8660a;
-          box-shadow: inset -1px -3px 5px 0px #a8660a;
-}
-
-.dispenser__glass .bubblegum:nth-of-type(10) {
-  bottom: 2.5rem;
-  left: 10rem;
   background: #00CC99;
   -webkit-box-shadow: inset -1px -3px 5px 0px #009973;
           box-shadow: inset -1px -3px 5px 0px #009973;
 }
 
-.dispenser__glass .bubblegum:nth-of-type(11) {
-  bottom: 2rem;
-  left: 7.5rem;
+.dispenser__glass .bubblegum:nth-of-type(4) {
+  bottom: 2.5rem;
+  left: 2.5rem;
   background: #A5C103;
   -webkit-box-shadow: inset -1px -3px 5px 0px #7a8f02;
           box-shadow: inset -1px -3px 5px 0px #7a8f02;
+}
+
+.dispenser__glass .bubblegum:nth-of-type(5) {
+  bottom: 0.5rem;
+  left: 5rem;
+  background: #A5C103;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #7a8f02;
+          box-shadow: inset -1px -3px 5px 0px #7a8f02;
+}
+
+.dispenser__glass .bubblegum:nth-of-type(6) {
+  bottom: 2.25rem;
+  left: 4.25rem;
+  background: #F4DB1D;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #d4bc0a;
+          box-shadow: inset -1px -3px 5px 0px #d4bc0a;
+}
+
+.dispenser__glass .bubblegum:nth-of-type(7) {
+  bottom: 1.25rem;
+  left: 6rem;
+  background: #00CC99;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #009973;
+          box-shadow: inset -1px -3px 5px 0px #009973;
+}
+
+.dispenser__glass .bubblegum:nth-of-type(8) {
+  bottom: 1.25rem;
+  left: 9rem;
+  background: #00CC99;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #009973;
+          box-shadow: inset -1px -3px 5px 0px #009973;
+}
+
+.dispenser__glass .bubblegum:nth-of-type(9) {
+  bottom: 0.5rem;
+  left: 7.5rem;
+  background: #D81E5B;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #ab1848;
+          box-shadow: inset -1px -3px 5px 0px #ab1848;
+}
+
+.dispenser__glass .bubblegum:nth-of-type(10) {
+  bottom: 2.5rem;
+  left: 10rem;
+  background: #F4241D;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #d4110a;
+          box-shadow: inset -1px -3px 5px 0px #d4110a;
+}
+
+.dispenser__glass .bubblegum:nth-of-type(11) {
+  bottom: 2rem;
+  left: 7.5rem;
+  background: #F4241D;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #d4110a;
+          box-shadow: inset -1px -3px 5px 0px #d4110a;
 }
 
 .dispenser__glass .bubblegum:nth-of-type(12) {
@@ -204,17 +204,17 @@ body {
 .dispenser__glass .bubblegum:nth-of-type(13) {
   bottom: 3rem;
   left: 8.5rem;
-  background: #A5C103;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #7a8f02;
-          box-shadow: inset -1px -3px 5px 0px #7a8f02;
+  background: #D8830D;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #a8660a;
+          box-shadow: inset -1px -3px 5px 0px #a8660a;
 }
 
 .dispenser__glass .bubblegum:nth-of-type(14) {
   bottom: 4rem;
   left: 0.25rem;
-  background: #662E9B;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #4c2274;
-          box-shadow: inset -1px -3px 5px 0px #4c2274;
+  background: #00CC99;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #009973;
+          box-shadow: inset -1px -3px 5px 0px #009973;
 }
 
 .dispenser__glass .bubblegum:nth-of-type(15) {
@@ -228,33 +228,33 @@ body {
 .dispenser__glass .bubblegum:nth-of-type(16) {
   bottom: 5rem;
   left: 10.75rem;
-  background: #662E9B;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #4c2274;
-          box-shadow: inset -1px -3px 5px 0px #4c2274;
+  background: #3E67C1;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #32529a;
+          box-shadow: inset -1px -3px 5px 0px #32529a;
 }
 
 .dispenser__glass .bubblegum:nth-of-type(17) {
   bottom: 5.5rem;
   left: 0.125rem;
-  background: #A5C103;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #7a8f02;
-          box-shadow: inset -1px -3px 5px 0px #7a8f02;
+  background: #D8830D;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #a8660a;
+          box-shadow: inset -1px -3px 5px 0px #a8660a;
 }
 
 .dispenser__glass .bubblegum:nth-of-type(18) {
   bottom: 5.5rem;
   left: 1.25rem;
-  background: #00CC99;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #009973;
-          box-shadow: inset -1px -3px 5px 0px #009973;
+  background: #F4241D;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #d4110a;
+          box-shadow: inset -1px -3px 5px 0px #d4110a;
 }
 
 .dispenser__glass .bubblegum:nth-of-type(19) {
   bottom: 6rem;
   left: 10.25rem;
-  background: #662E9B;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #4c2274;
-          box-shadow: inset -1px -3px 5px 0px #4c2274;
+  background: #3E67C1;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #32529a;
+          box-shadow: inset -1px -3px 5px 0px #32529a;
 }
 
 .dispenser__label {
@@ -387,9 +387,9 @@ body {
   opacity: 0;
   left: 0.75rem;
   border-radius: 50%;
-  background: #D81E5B;
-  -webkit-box-shadow: inset -1px -3px 5px 0px #ab1848;
-          box-shadow: inset -1px -3px 5px 0px #ab1848;
+  background: #3E67C1;
+  -webkit-box-shadow: inset -1px -3px 5px 0px #32529a;
+          box-shadow: inset -1px -3px 5px 0px #32529a;
   -webkit-animation: bubblegum-drop 3000ms cubic-bezier(0.41, 0.28, 0.33, 0.9) 1;
           animation: bubblegum-drop 3000ms cubic-bezier(0.41, 0.28, 0.33, 0.9) 1;
   -webkit-animation-delay: 1950ms;

@@ -3,7 +3,7 @@
           box-sizing: border-box;
 }
 
-.fish__transparent::before, .fish__body::before {
+.fish__transparent::before, .fish__body::before, .fish__body::after {
   content: '';
   display: block;
   position: absolute;
@@ -76,9 +76,21 @@ body .container {
   width: 7.75rem;
   height: 7.75rem;
   background-color: #FBFBF2;
-  border-radius: 0% 104% 0% 30%;
+  border-radius: 0% 126% 0% 54%;
   right: -4.5rem;
-  bottom: 0;
+  bottom: -0.75rem;
+}
+
+.fish__body::after {
+  z-index: 8;
+  height: 6.5rem;
+  width: 2.5rem;
+  background-color: #7690B5;
+  border-radius: 0% 144%;
+  right: -28px;
+  bottom: 61px;
+  -webkit-transform: rotate(-52deg);
+          transform: rotate(-52deg);
 }
 
 .fish__body .eye {
@@ -87,7 +99,7 @@ body .container {
   width: 0.75rem;
   height: 0.5rem;
   border-radius: 50%;
-  background: black;
+  background: #121212;
 }
 
 .fish__body .eye.left {
@@ -146,12 +158,12 @@ body .container {
   z-index: 5;
   width: 1rem;
   height: 2.75rem;
-  border-radius: 0.5rem 50% 50% 0.5rem;
+  border-radius: 0.5rem 100% 50% 0.5rem;
   background: #FBFBF2;
-  right: 3rem;
+  right: 3.3rem;
   bottom: 0.9rem;
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg);
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
 }
 
 .upperfin {
@@ -178,17 +190,23 @@ body .container {
 }
 
 .fin.left {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  top: 6rem;
+  z-index: 10;
+  -webkit-transform: rotate(19deg);
+          transform: rotate(19deg);
+  top: 6.75rem;
   left: 6rem;
+  -webkit-box-shadow: inset 5px -3px 0 #80808047;
+          box-shadow: inset 5px -3px 0 #80808047;
 }
 
 .fin.right {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  bottom: -1.5rem;
-  left: 3.5rem;
+  z-index: -2;
+  -webkit-transform: rotate(-53deg);
+          transform: rotate(-53deg);
+  bottom: -0.5rem;
+  left: 3.25rem;
+  -webkit-box-shadow: inset 5px 5px 0 #80808047;
+          box-shadow: inset 5px 5px 0 #80808047;
 }
 
 .tail {
@@ -216,8 +234,8 @@ body .container {
           transform: rotate(0deg);
   top: 0;
   left: 0;
-  -webkit-animation: left-t 2s ease infinite;
-          animation: left-t 2s ease infinite;
+  -webkit-animation: left-t 1s ease infinite;
+          animation: left-t 1s ease infinite;
 }
 
 .tail-right {
@@ -225,8 +243,8 @@ body .container {
           transform: rotate(90deg);
   top: 0;
   right: 0;
-  -webkit-animation: right-t 2s ease infinite;
-          animation: right-t 2s ease infinite;
+  -webkit-animation: right-t 1s ease infinite;
+          animation: right-t 1s ease infinite;
 }
 
 @-webkit-keyframes swim {
@@ -257,8 +275,8 @@ body .container {
             transform: rotate(0deg);
   }
   50% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -272,8 +290,8 @@ body .container {
             transform: rotate(0deg);
   }
   50% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -287,8 +305,8 @@ body .container {
             transform: rotate(90deg);
   }
   50% {
-    -webkit-transform: rotate(98deg);
-            transform: rotate(98deg);
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
   }
   100% {
     -webkit-transform: rotate(90deg);
@@ -302,8 +320,8 @@ body .container {
             transform: rotate(90deg);
   }
   50% {
-    -webkit-transform: rotate(98deg);
-            transform: rotate(98deg);
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
   }
   100% {
     -webkit-transform: rotate(90deg);

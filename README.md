@@ -19,7 +19,7 @@ My contributions to Codevember challenges in 2019
 | 09    | Game      | [Game Boy Color](https://codepen.io/janmez/full/BaaVeWX) |
 | 18    | Stretch   | [Stretchy & Gooey Honey](https://codepen.io/janmez/full/XWWoLpX) ⭐️|
 | 19    | Color     | [Colorful Bubblegum](https://codepen.io/janmez/full/jOOdzdN) ⭐️|
-| 20    | Curve     | [Curvy Koi Fish](https://codepen.io/janmez/full/LYYaboV) |
+| 20    | Curve     | [Curvy Koi Fish](https://codepen.io/janmez/full/LYYaboV) ⭐️|
 <br/>
 
 ⭐️ = Was a Picked Pen on CodePen's home page
