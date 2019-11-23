@@ -20,7 +20,8 @@ My contributions to Codevember challenges in 2019
 | 18    | Stretch   | [Stretchy & Gooey Honey](https://codepen.io/janmez/full/XWWoLpX) ⭐️|
 | 19    | Color     | [Colorful Bubblegum](https://codepen.io/janmez/full/jOOdzdN) ⭐️|
 | 20    | Curve     | [Curvy Koi Fish](https://codepen.io/janmez/full/LYYaboV) ⭐️|
-| 21    | Fast      | [Fast Lightning Strike](https://codepen.io/janmez/full/jOOREzP) |
+| 21    | Fast      | [Fast Lightning Strike](https://codepen.io/janmez/full/jOOREzP) ⭐️|
+| 22    | Fruit     | [Dragonfruit](https://codepen.io/janmez/full/zYYXBYb) |
 <br/>
 
 ⭐️ = Was a Picked Pen on CodePen's home page
