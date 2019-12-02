@@ -1,0 +1,112 @@
+$background: #192941;
+$moon: white;
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+@mixin crater_pos($w, $t, $l, $c){
+	width: $w;
+	height: $w;
+	top: $t;
+	left: $l;
+	background: $c;
+}
+%pseudo_base{
+	content: '';
+	display: block;
+	position: absolute;
+}
+
+body{
+	background: $background;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.container{
+	width: 30rem;
+	height: 30rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.star{
+		position: absolute;
+		background: white;
+		border-radius: 50%;
+	}
+	@for $i from 1 through (60){
+		$top: random(95)+vh;
+		$left: random(95)+vw;
+		$size: random(3)+px;
+		.star:nth-of-type(#{$i}){
+			width: $size;
+			height: $size;
+			top: $top;
+			left: $left;
+		}
+	}
+}
+.moon{
+	z-index: 5;
+	position: absolute;
+	width: 15rem;
+	height: 15rem;
+	background: $moon;
+	border-radius: 50%;
+	overflow: hidden;
+	&::before, &::after{
+		z-index: 3;
+		@extend %pseudo_base;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
+	&::before{
+		background: darken($moon, 20%);
+	}
+	&::after{
+		background: $moon;
+		left: 1.4rem;
+	}
+	.crater{
+		z-index: 10;
+		position: absolute;
+		border-radius: 50%;
+	}
+	.crater:nth-of-type(1){
+		@include crater_pos(3rem, 7rem, 11rem, darken($moon, 25%));
+	}
+	.crater:nth-of-type(2){
+		@include crater_pos(2rem, 11rem, 9rem, darken($moon, 25%));
+	}
+	.crater:nth-of-type(3){
+		@include crater_pos(1rem, 13rem, 6rem, darken($moon, 25%));
+	}
+	.crater:nth-of-type(4){
+		@include crater_pos(5.5rem, 3rem, 2rem, darken($moon, 10%));
+	}
+}
+
+.glow{
+	z-index: 2;
+	position: absolute;
+	width: 16rem;
+	height: 16rem;
+	background: radial-gradient(transparentize($moon,0.5), transparent);
+	border-radius: 50%;
+	filter: blur(10px);
+	animation: glow 10s linear infinite;
+}
+
+@keyframes glow{
+	0%, 100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.15);
+	}
+}

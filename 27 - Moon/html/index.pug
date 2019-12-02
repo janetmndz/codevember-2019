@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title #Codevember 27 Moon
+        link(rel="stylesheet", type="text/css", href="../css/style.css")
+    body
+    .container
+        - for(var i = 0; i < 60; i++)
+            .star
+        .moon
+            - for(var i = 0; i < 4; i++)
+                .crater
+        .glow
